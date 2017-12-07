@@ -15,7 +15,6 @@ int main(int argc, char *argv[]) {
 
 		head = head->next;
 	}
-
 	printf("\n키워드 %s를 포함하고 있는 %d개의 파일을 찾았습니다!\n", word, count);
 
 	return 0;
