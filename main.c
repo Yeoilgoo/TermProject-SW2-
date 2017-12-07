@@ -1,24 +1,22 @@
 #include "header.h"
 
-int main() {
+int main(int argc, char *argv[]) {
 	int count = 0;
 
-	/*°Ë»ö Å°¿öµå ÀÔ·Â*/
-
-	printf("°Ë»öÇÒ Å°¿öµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-	gets(word); 
+	/*ê²€ìƒ‰ í‚¤ì›Œë“œ ì…ë ¥*/
+	strcpy(word, argv[1]);
 
 	findfile();
 
-	/*°á°ú Ãâ·Â*/
+	/*ê²°ê³¼ ì¶œë ¥*/
 	while (head != NULL) {
-		printf("ÆÄÀÏ¸í : %s, Å°¿öµå °³¼ö : %d \n", head->filename, head->num);
+		printf("íŒŒì¼ëª… : %s, í‚¤ì›Œë“œ ê°œìˆ˜ : %d \n", head->filename, head->num);
 		count++;
 
 		head = head->next;
 	}
 
-	printf("\nÅ°¿öµå %s¸¦ Æ÷ÇÔÇÏ°í ÀÖ´Â %d°³ÀÇ ÆÄÀÏÀ» Ã£¾Ò½À´Ï´Ù!\n", word, count);
+	printf("\ní‚¤ì›Œë“œ %së¥¼ í¬í•¨í•˜ê³  ìˆëŠ” %dê°œì˜ íŒŒì¼ì„ ì°¾ì•˜ìŠµë‹ˆë‹¤!\n", word, count);
 
 	return 0;
 }
